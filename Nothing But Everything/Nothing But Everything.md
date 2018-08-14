@@ -26,7 +26,7 @@ I then tought that the process was similar to how text messages usually are tran
 Now we now the encryption mechanism so we just need to write some clever script that decrypts everything.<br><br>
 
 ## Decrypting the files:
-I chose python's os module, and a DFS algorithm to decrypt the files, I put the extracted archive in a folder named `Encrypted` which is in the same directory as the script, the output is the folder named `Decrypt`.<br>
+I chose python's os module, and a DFS algorithm to decrypt the files, I put the extracted archive in a folder named `Encrypted` which is in the same directory as the script, the output is the folder named `Decrypted`.<br>
 Since the code is self explanatory, I won't explain it any further:
 ```python
 import os
@@ -77,7 +77,9 @@ for y in os.listdir(os.getcwd()):
 		DFS(Join(os.getcwd(),y))
 		os.rename(y,'Decrypted')
 ```
+
 <br>
+
 ## Finding the flag:
 This part was very easy, I simply opened every file (mostly out of curiosity) until i found the flag. It was in `here (2).xlsx`, as the name of the sheet:<br>
 Flag: **tjctf{n00b_h4x0r_b357_qu17}**
