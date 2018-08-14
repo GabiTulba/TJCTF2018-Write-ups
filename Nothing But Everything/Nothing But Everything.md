@@ -1,6 +1,6 @@
 # Nothing But Everything (20 points/ 110 solves)
 ## Problem statement:
->My computer got infected with ransomware and now none of my [documents](i'lladdthelinkhere) are accessible anymore! If you help me out, I'll reward you a flag!
+>My computer got infected with ransomware and now none of my [documents](https://github.com/GabiTulba/TJCTF2018-Write-ups/blob/master/Nothing%20But%20Everything/7459b0c272ba30c9fea94391c7d7051d78e1732c871c3a6f27070fcb34f9e734_encrypted.tar.gz) are accessible anymore! If you help me out, I'll reward you a flag!
 <br><br>
 
 ## My opinion:
@@ -11,7 +11,7 @@ There are a few clues that reveal the encryption mechanism:
   1. Both the names and the contents were encrypted.
   2. There is no Private Key, so the encryption system is simple and most probably easily reversible.
   3. The file names/ directory names and contents of the files are all numbers (very long numbers). 
-  4. The file and directory names varied quite a bit in lenght.
+  4. The file and directory names varied quite a bit in length.
 <br>
 This lead me to think that the everything was transformed somehow byte by byte.<br>
 I then tought that the process was similar to how text messages usually are transformed to integers during RSA encryption so I tried that with the main directory's name.<br>
@@ -24,10 +24,10 @@ I then tought that the process was similar to how text messages usually are tran
 <br>
 
 **Bingo!** <br>
-Now we now the encryption mechanism so we just need to write some clever script that decrypts everything.<br><br>
+Now we know the encryption mechanism so we just need to write some clever script that decrypts everything.<br><br>
 
 ## Decrypting the files:
-I chose python's os module, and a DFS algorithm to decrypt the files, I put the extracted archive in a folder named `Encrypted` which is in the same directory as the script, the output is the folder named `Decrypted`.<br>
+I chose python's `os` module, and a DFS algorithm to decrypt the files, I put the extracted archive in a folder named `Encrypted` which is in the same directory as the script, the output is the folder named `Decrypted`.<br>
 Since the code is self explanatory, I won't explain it any further:
 ```python
 import os
