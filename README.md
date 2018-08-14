@@ -1,7 +1,7 @@
 # TJCTF2018-Write-ups
 ## Problems:
 These are the problems I solved for my team during TJCTF 2018<br><br>
-[Nothing But Everything]() 20p<br>
+[Nothing But Everything](https://github.com/GabiTulba/TJCTF2018-Write-ups/blob/master/Nothing%20But%20Everything/Nothing%20But%20Everything.md) 20p<br>
 [Python Reversing]() 40p<br>
 [Bad Cipher]() 50p<br>
 [Speedy Security]() 50<br>
