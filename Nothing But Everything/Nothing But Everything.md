@@ -22,7 +22,8 @@ I then tought that the process was similar to how text messages usually are tran
 > `>>> print x`<br>
 > `Documents`<br>
 <br>
-**Bingo!**<br>
+
+**Bingo!** <br>
 Now we now the encryption mechanism so we just need to write some clever script that decrypts everything.<br><br>
 
 ## Decrypting the files:
