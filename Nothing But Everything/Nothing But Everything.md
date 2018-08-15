@@ -82,6 +82,6 @@ for y in os.listdir(os.getcwd()):
 <br>
 
 ## Finding the flag:
-This part was very easy, I simply opened every file (mostly out of curiosity) until i found the flag. It was in `here (2).xlsx`, as the name of the sheet:<br>
+This part was very easy, I simply opened every file (mostly out of curiosity) until I found the flag. It was in `here (2).xlsx`, as the name of the sheet:<br>
 ![Flag](https://github.com/GabiTulba/TJCTF2018-Write-ups/blob/master/Nothing%20But%20Everything/flag.png)
 Flag: **tjctf{n00b_h4x0r_b357_qu17}**
