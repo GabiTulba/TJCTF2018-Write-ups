@@ -55,24 +55,24 @@ Ok, now let's understand the encryption: <br>
 
 **NOTE** : The encryption works properly only if the message's length is a multiple of the key's length (this is due to `zip(*s)`), I'll explain it a bit later.<br>
 
-**NOTE** : `h((1<<8)+o(f))[3:]` and `hex(ord(y))[2:]` give the same output since `(1<<8)` is 256 and that's `0x100` in hex, so `h((1<<8)+o(f))` will always be `0x1XX`<br>
+**NOTE** : `h((1<<8)+o(f))[3:]` and `hex(ord(y))[2:]` give the same output since `(1<<8)` is 256 and that's `0x100` in hex, so `h((1<<8)+o(f))` will always be `0x1XX` <br>
 
 The encryption function takes a key and a message. <br>
-It then creates the matrix `s` of size `len(key) x len(message)/len(key)` which pretty much is the message written like a normal text that moves to a new line when there is no space left on the current line, except the rows and columns are reversed (see the following example).
->`>>> import sys`
->`>>> message='thisismymessage!'`
->`>>> key='Akey'`
->`>>> L=len(key)`
->`>>> s=[message[i::L] for i in range(L)]`
->`>>> for i in range(len(s)):`
->`...     for j in range(len(s[i])):`
->`...         sys.stdout.write(s[i][j])`
->`...     sys.stdout.write('\n')`
->`...`
->`tima`
->`hseg`
->`imse`
->`sys!`
+It then creates the matrix `s` of size `len(key) x len(message)/len(key)` which pretty much is the message written like a normal text that moves to a new line when there is no space left on the current line, except the rows and columns are reversed (see the following example). <br>
+>`>>> import sys` <br>
+>`>>> message='thisismymessage!'` <br>
+>`>>> key='Akey'` <br>
+>`>>> L=len(key)` <br>
+>`>>> s=[message[i::L] for i in range(L)]` <br>
+>`>>> for i in range(len(s)):` <br>
+>`...     for j in range(len(s[i])):` <br>
+>`...         sys.stdout.write(s[i][j])` <br>
+>`...     sys.stdout.write('\n')` <br>
+>`...` <br>
+>`tima` <br>
+>`hseg` <br>
+>`imse` <br>
+>`sys!` <br>
 
 <br>
 Now, for every line of the matrix `s` the following process is applyied:
