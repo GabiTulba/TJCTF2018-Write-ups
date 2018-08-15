@@ -45,7 +45,7 @@ One thing that makes this problem a little harder (the encryption isn't easily r
 > `2` <br>
 <br>
 
-But still, since we know every variable (including `other`), we can guess the flag character by character.
+But still, since we know every variable (including `other`) we can ecnrypt, so we can guess the flag character by character by encrypting every possible byte and checking if it matches the desired output, this is known as a [Chosen-plaintext attack](https://en.wikipedia.org/wiki/Chosen-plaintext_attack).
 
 ## Decrypting the flag:
 Here's the code: <br>
@@ -71,7 +71,7 @@ def encrypt(flag):
 L=0
 while(L<len(enc)):
 	for j in range(256):
-		if(L<=encrypt(flag+chr(j))-8):
+		if(L<=encrypt(flag+chr(j))-8): #at least 8 new bits have to mach the output
 			flag+=chr(j)
 			L=encrypt(flag)
 			print L
