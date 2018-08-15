@@ -97,11 +97,14 @@ After, that the last line of the `encrypt` function returns the hex of the strin
 <br>
 
 ## Finding the key:
-Now we know that the key's lenght might be: `1 2 4 7 8 14 28 56`, most probably it will be either `4, 7, 8 or 14` so let's try them one by one:
-Sice we know the first 6 bytes of the flag: `tjctf{`, we can check 4 by hand and see if it's wrong:
+Now we know that the key's lenght might be: `1 2 4 7 8 14 28 56`, most probably it will be either `4, 7, 8 or 14` so let's try them one by one:<br>
+
+Sice we know the first 6 bytes of the flag: `tjctf{`, we can check 4 by hand and see if it's wrong:<br>
+
   1. The first byte of the key is `hex(ord('t')^int('47',16))=='0x33' or '3'`
   2. If the key length was 4 then at the 5-th byte `hex(int('2d',16)^ord('3')^(int('47',16)>>2)==0xf` should be `'f'` or `0x66`, so the key is longer than 4.
-  3. Now we can find the first 6 bytes of the key:
+  3. Now we can find the first 6 bytes of the key: <br>
+  
 >`>>> x=['47','3c','23','19','2d','47']` <br>
 >`>>> x=[int(y,16) for y in x]` <br>
 >`>>> flag='tjctf{'` <br>
@@ -111,7 +114,8 @@ Sice we know the first 6 bytes of the flag: `tjctf{`, we can check 4 by hand and
 
 <br> 
 
-For the other lenghts I wrote a script that will give us a partially decrypted flag for each length:
+For the other lenghts I wrote a script that will give us a partially decrypted flag for each length: <br>
+
 ```python
 message = open('flag.enc').read().strip('\n')
 
