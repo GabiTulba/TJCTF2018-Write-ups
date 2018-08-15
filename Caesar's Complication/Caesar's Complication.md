@@ -1,12 +1,12 @@
 # Caesar's Complication (20 points/ 76 solves)
 ## Problem statement:
-> King Julius Caesar was infamous for his [wordsearch]() solving speed.
+> King Julius Caesar was infamous for his [wordsearch](https://github.com/GabiTulba/TJCTF2018-Write-ups/blob/master/Caesar's%20Complication/ciphertext) solving speed.
 <br><br>
 ## My opinion:
 Even if the idea of this challenge was pretty straight forward, it was still very frustrating.<br>
 <br>
 ## Understanding the challenge:
-First of all,i t was clear from the chall's name that the encryption was a **Caesar cipher** with some arbitrary shift, and also the statement explicitly said that the ciphertext was a **wordsearch**, so to search for the flag we just needed some code to check for the string that starts with`tjctf{` and ends with `}` in all 8 directions for every possible key.<br>
+First of all, it was clear from the challenge's name that the encryption was a **Caesar Cipher** with some arbitrary shift key, and also the statement explicitly said that the ciphertext was a **wordsearch**, so to search for the flag we just needed some code to check for the string that starts with`tjctf{` and ends with `}` in all 8 directions for every possible key.<br>
 <br>
 
 ## The code:
@@ -48,13 +48,14 @@ for i in range(26):
 
 ## Finding the flag:
 The python code gave the following output:
->Key: 0
->Key: 1
->...
->Key: 8
->Possible flag found: tjctf{idesofmarch}
->Key: 9
->...
->Key: 25
+>Key: 0 <br>
+>Key: 1 <br>
+>... <br>
+>Key: 8 <br>
+>Possible flag found: tjctf{idesofmarch} <br>
+>Key: 9 <br>
+>... <br>
+>Key: 25 <br>
+
 So the flag was very easy to find:
 Flag: **tjctf{idesofmarch}**
