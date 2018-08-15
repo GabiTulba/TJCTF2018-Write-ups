@@ -9,12 +9,12 @@ This problem was easy yet pretty fun. Of course the 'ransomware' dindn't provide
 ## Finding out the encryption:
 There are a few clues that reveal the encryption mechanism:
   1. Both the names and the contents were encrypted.
-  2. There is no Private Key, so the encryption system is simple and most probably easily reversible.
+  2. There is no Private Key?Public Key pair involved, so the encryption system is simple and most probably [deterministic](https://en.wikipedia.org/wiki/Deterministic_encryption) and easily reversible.
   3. The file names/ directory names and contents of the files are all numbers (very long numbers). 
   4. The file and directory names varied quite a bit in length.
 <br>
 This lead me to think that the everything was transformed somehow byte by byte.<br>
-I then tought that the process was similar to how text messages usually are transformed to integers during RSA encryption so I tried that with the main directory's name.<br>
+I then tought that the process was similar to how text messages usually are transformed to integers during [RSA](https://en.wikipedia.org/wiki/RSA_(cryptosystem)) encryption so I tried that with the main directory's name.<br>
 
 > `>>> x=1262404985085867488371`<br>
 > `>>> x=hex(x)[2:].strip('L')`<br>
@@ -27,7 +27,7 @@ I then tought that the process was similar to how text messages usually are tran
 Now we know the encryption mechanism so we just need to write some clever script that decrypts everything.<br><br>
 
 ## Decrypting the files:
-I chose python's `os` module, and a DFS algorithm to decrypt the files, I put the extracted archive in a folder named `Encrypted` which is in the same directory as the script, the output is the folder named `Decrypted`.<br>
+I chose python's [os](https://docs.python.org/2/library/os.html) module, and a [DFS](https://en.wikipedia.org/wiki/Depth-first_search) algorithm to decrypt the files, I put the extracted archive in a folder named `Encrypted` which is in the same directory as the script, the output is the folder named `Decrypted`.<br>
 Since the code is self explanatory, I won't explain it any further:
 ```python
 import os
