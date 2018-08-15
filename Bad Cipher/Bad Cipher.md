@@ -7,7 +7,8 @@
 <br><br>
 
 ## My opinion:
-Again... why the `Reverse Engineering` tag, this time we were given an obfuscated python code that encrypts an input string using a key. **THIS IS CRYPTO!** <br><br>
+Again... why the `Reverse Engineering` tag, this time we were given an obfuscated python code that encrypts an input string using a key. **THIS IS CRYPTO!** <br>
+Anyway, the vulnerability was that we knew the first bytes of the flag and that gave us a part of the key <br><br>
 
 ## Understanding the encryption:
 We were supplied with an `encrypted flag=473c23192d4737025b3b2d34175f66421631250711461a7905342a3e365d08190215152f1f1e3d5c550c12521f55217e500a3714787b6554`and some code that encrypted the flag:
