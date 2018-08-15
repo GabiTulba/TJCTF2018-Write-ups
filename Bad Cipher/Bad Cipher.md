@@ -75,7 +75,8 @@ It then creates the matrix `s` of size `len(key) x len(message)/len(key)` which 
 >`sys!` <br>
 
 <br>
-Now, for every line of the matrix `s` the following process is applyied:
+Now, for every line of the matrix `s` the following process is applyied: <br>
+
 ```python
 for i in range(L):
 	act=0
@@ -92,11 +93,13 @@ for i in range(L):
 2. Each byte of the ciphertext is dependent of the previous byte
 <br><br>
 
-After, that the last line of the `encrypt` function returns the hex of the string `''.join(''.join(x) for x in zip(*s))` which means it reverses the process that generated `s` in the first place so the message's bytes are in the same order even when encrypted!
+After, that the last line of the `encrypt` function returns the hex of the string `''.join(''.join(x) for x in zip(*s))` which means it reverses the process that generated `s` in the first place so the message's bytes are in the same order even when encrypted! <br>
+
 **NOTE** : Let's talk about `zip(*s)`, the zip() function stops when the shortest array reaches it's end. So if `len(message)` is not a multiple of `len(key)` the last bytes of the message will be ignored (see the python [documentation](https://docs.python.org/2/library/functions.html#zip)). This was a huge help in solving the problem since now we know now that the key's lenght divides 56.
 <br>
 
 ## Finding the key:
+
 Now we know that the key's lenght might be: `1 2 4 7 8 14 28 56`, most probably it will be either `4, 7, 8 or 14` so let's try them one by one:<br>
 
 Sice we know the first 6 bytes of the flag: `tjctf{`, we can check 4 by hand and see if it's wrong:<br>
