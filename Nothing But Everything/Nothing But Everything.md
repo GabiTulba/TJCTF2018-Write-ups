@@ -14,7 +14,7 @@ There are a few clues that reveal the encryption mechanism:
   4. The file and directory names varied quite a bit in length.
 <br>
 This lead me to think that the everything was transformed somehow byte by byte.<br>
-I then tought that the process was similar to how text messages usually are transformed to integers during [RSA](https://en.wikipedia.org/wiki/RSA_(cryptosystem) encryption so I tried that with the main directory's name.<br>
+I then tought that the process was similar to how text messages usually are transformed to integers during RSA encryption so I tried that with the main directory's name.<br>
 
 > `>>> x=1262404985085867488371`<br>
 > `>>> x=hex(x)[2:].strip('L')`<br>
