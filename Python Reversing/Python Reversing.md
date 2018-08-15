@@ -6,7 +6,7 @@
 
 ## My opinion:
 
-I still don't understand why this problem was tagged as `Reverse Engineering`, it was a simple cryptography problem, in my opinion it was way easier than Caesar's Complication, the number of solves talk for themselves.<br><br>
+I still don't understand why this problem was tagged as `Reverse Engineering`, it was a simple cryptography problem with a classic attack, in my opinion it was way easier than Caesar's Complication, the number of solves talk for themselves.<br><br>
 
 ## Understanding the encryption
 
@@ -28,9 +28,9 @@ print(''.join(bin(x)[2:].zfill(8) for x in c))
 
 # original_output was 1001100001011110110100001100001010000011110101001100100011101111110100011111010101010000000110000011101101110000101111101010111011100101000011011010110010100001100010001010101001100001110110100110011101
 ```
-Ok, let's see what's happening step bt step:
+Ok, let's see what's happening step by step:
   1. The `flag` is transformed into an array called `arr`.
-  2. Then another array `other`of the same length as `arr` with random values from 1 to 4 is generated using a constant seed (clearly a bad idea).
+  2. Then another array `other`of the same length as `arr` with random values from 1 to 4 is generated using a constant seed (clearly a bad idea since now the encryption is [deterministic](https://en.wikipedia.org/wiki/Deterministic_encryption)).
   3. The array `arr` is multiplied with the array `other` by `arr[i]*=other[i]`.
   4. Then the array `b=arr` is xored element by element with the array `lmao`.
   5. The encrypted flag is the concatenation of the binary representation of every value in array `c=b`.
