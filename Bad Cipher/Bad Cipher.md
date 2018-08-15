@@ -100,7 +100,7 @@ After, that the last line of the `encrypt` function returns the hex of the strin
 
 ## Finding the key:
 
-Now we know that the key's lenght might be: `1 2 4 7 8 14 28 56`, most probably it will be either `4, 7, 8 or 14` so let's try them one by one: <br>
+Now we know that the key's lenght might be: `1, 2, 4, 7, 8, 14, 28 or 56`, most probably it will be either `4, 7, 8 or 14` so let's try them one by one: <br>
 
 Sice we know the first 6 bytes of the flag: `tjctf{`, we can check 4 by hand and see if it's wrong: <br>
 
