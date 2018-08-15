@@ -3,7 +3,7 @@
 > King Julius Caesar was infamous for his [wordsearch](https://github.com/GabiTulba/TJCTF2018-Write-ups/blob/master/Caesar's%20Complication/ciphertext) solving speed.
 <br><br>
 ## My opinion:
-Even if the idea of this challenge was pretty straight forward, it was still very frustrating.<br>
+Even if the idea of this challenge was pretty straight forward, I still found it very frustrating.<br>
 <br>
 ## Understanding the challenge:
 First of all, it was clear from the challenge's name that the encryption was a [Caesar Cipher](https://en.wikipedia.org/wiki/Caesar_cipher) with some arbitrary shift key, and also the statement explicitly said that the ciphertext was a [Word Search](https://en.wikipedia.org/wiki/Word_search) table, so to search for the flag we just needed some code to check for the string that starts with`tjctf{` and ends with `}` in all 8 directions for every possible key.<br>
