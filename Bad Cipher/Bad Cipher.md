@@ -167,6 +167,6 @@ Ok so it's clear that the key's length is 8.
 
 ## Finding the flag:
 
-Now we have a lot of info about the flag: `tjctf{��ybe_Wr��3ing_m˔3ncRyp��0N_MY5��f_W4Sn��v_sm4R��` and we know the key's length, the flag pretty much says `maybe writing my encryption ,myself wasn't very smart`, so let's see how it's written in leet. Eventually I tried `tjctf{m4` and done! <br>
+Now we have a lot of info about the flag: `tjctf{��ybe_Wr��3ing_m˔3ncRyp��0N_MY5��f_W4Sn��v_sm4R��` and we know the key's length, the flag pretty much says `maybe writing my encryption ,myself wasn't very smart`, so I tried to write it in leet. Eventually I tried `tjctf{m4` as the first 8 bytes and rand [decrypt.py](https://github.com/GabiTulba/TJCTF2018-Write-ups/blob/master/Bad%20Cipher/decrypt.py) and done! <br>
 
 Flag: **tjctf{m4ybe_Wr1t3ing_mY_3ncRypT10N_MY5elf_W4Snt_v_sm4R7}**
