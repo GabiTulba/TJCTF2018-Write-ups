@@ -1,7 +1,11 @@
 # Sarah's Cryptosystem (60 points/ 33 solves)
 ## Problem statement:
+> I had a friend who published this public key cryptosystem as part of her science fair project, but I'm not sure it's so secure...
+> [Public Key]()
+> [Ciphertext]()
 
 <br>
+
 ## My opinion:
 This was a super fun to solve challenge, mostly because I didn't know that such a cryptosystem(even if easily breakable) existed.
 <br><br>
