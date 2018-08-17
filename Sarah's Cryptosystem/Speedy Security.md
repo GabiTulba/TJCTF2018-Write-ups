@@ -1,8 +1,8 @@
 # Sarah's Cryptosystem (60 points/ 33 solves)
 ## Problem statement:
-> I had a friend who published this public key cryptosystem as part of her science fair project, but I'm not sure it's so secure...
-> [Public Key]()
-> [Ciphertext]()
+> I had a friend who published this public key cryptosystem as part of her science fair project, but I'm not sure it's so secure... <br>
+> [Public Key]() <br>
+> [Ciphertext]() <br>
 
 <br>
 
