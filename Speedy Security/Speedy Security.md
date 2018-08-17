@@ -6,7 +6,7 @@
 <br>
 
 ## My opinion:
-The idea of this problem was pretty easy, perform a timing attack. Easier said than done if you ask me. 
+The idea of this problem was pretty simple, perform a timing attack on a password checker. Easier said than done if you ask me. 
 <br><br>
 
 ## The challenge:
