@@ -1,4 +1,4 @@
-# Python Reversing (40 points/ 36 solves)
+# Speedy Security (40 points/ 36 solves)
 ## Problem statement:
 >I hear there's a flag hiding behind this new service, Speedy Security(TM). Can you find it?
 >nc problem1.tjctf.org 8003
