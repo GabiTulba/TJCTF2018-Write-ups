@@ -3,7 +3,7 @@
 >I hear there's a flag hiding behind this new service, Speedy Security(TM). Can you find it?
 >nc problem1.tjctf.org 8003
 <br>
-##My opinion:
+## My opinion:
 The idea of this problem was pretty easy, perform a timing attack. Easier said than done if you ask me. 
 <br><br>
 
@@ -12,15 +12,15 @@ Connecting through netcat on the server we get the following message:
 ```
 Welcome to Speedy Security(TM), where we'll check your password as much as you like, for added security!
 How many times would you like us to check each character of your password?
-
+1
 Please enter your password:
-
+1
 Authorization failed!
 ```
 
 <br>
 
-Ok so practically, we have a program that looks like this:
+Ok so practically, we have a program that looks like this, or somewhat like this:
 
 ```python
 def check(input,checks):
