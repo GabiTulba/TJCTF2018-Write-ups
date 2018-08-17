@@ -41,7 +41,8 @@ Now, it's pretty simple how a [timing attack](https://en.wikipedia.org/wiki/Timi
 Try for a big number of checks (`10**6` worked for me) for each character of the password all possible characters and choose the one that took the most time to compute. Easy right? Not really, the server had some latency and sometimes it would freeze for a couple seconds. So you couldn't really guess the password in one go, also multithreading saved my life here. One more thing that was essential was to take the average of a few queries (`5` in this case was enough) in order to avoid the server's random latency.
 
 ## Getting the password:
-I used the following code to get the password, but I had to restart it a few times with the last correct part of the password. I also asked the author for the length of the password, it was 32.
+I used the following code to get the password, but I had to restart it a few times with the last correct part of the password. I also asked the author for the length of the password, it was 32.<br>
+Also, after geting the first 5 characters of the password I took another wild guess assuming the password would be made of alphanumerical characters.<br>
 
 ```python
 from threading import Thread
