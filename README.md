@@ -7,7 +7,3 @@ These are the problems I solved for my team during TJCTF 2018<br><br>
 [Bad Cipher](https://github.com/GabiTulba/TJCTF2018-Write-ups/blob/master/Bad%20Cipher/Bad%20Cipher.md) 50p<br>
 [Speedy Security](https://github.com/GabiTulba/TJCTF2018-Write-ups/blob/master/Speedy%20Security/Speedy%20Security.md) 50<br>
 [Sarah's Cryptosystem](https://github.com/GabiTulba/TJCTF2018-Write-ups/blob/master/Sarah's%20Cryptosystem/Speedy%20Security.md) 60p<br>
-[Permutations]() 70p<br>
-[Bricked Binary]() 80p<br>
-[Affine]() 90p<br>
-[Mirror Mirror]() 100p<br>
